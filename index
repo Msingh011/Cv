@@ -39,7 +39,7 @@
 				    <div class="collapse navbar-collapse custome-navbar" id="bs-example-navbar-collapse-1">
 					    <ul class="nav navbar-nav navbar-right navbar-nav-primary">
 					    	<li class="active"><a href="#">Home</a></li>
-              				<li><a href="about.html">About Us</a></li>
+              				<li><a href="about">About Us</a></li>
               				<li><a href="#">Service</a></li>
               				<li><a href="#">Luxury Destinaction</a></li>
               				<li><a href="#">Popular choices</a></li>
