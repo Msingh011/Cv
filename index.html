@@ -266,6 +266,52 @@
 	});
 
 	</script>
+	
+	<script>
+      document.addEventListener(
+        "keydown",
+        function () {
+          if (event.keyCode == 123) {
+            return false;
+          } else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) {
+            return false;
+          } else if (event.ctrlKey && event.keyCode == 85) {
+            return false;
+          }
+        },
+        false
+      );
+
+      if (document.addEventListener) {
+        document.addEventListener(
+          "contextmenu",
+          function (e) {
+            e.preventDefault();
+          },
+          false
+        );
+      } else {
+        document.attachEvent("oncontextmenu", function () {
+          window.event.returnValue = false;
+        });
+      }
+
+      document.onkeydown = function (e) {
+        if (
+          (e.ctrlKey &&
+            (e.keyCode === 67 ||
+              e.keyCode === 86 ||
+              e.keyCode === 85 || //(ctrl + u)
+              e.keyCode === 117)) ||
+          e.keyCode === 123 ||
+          (e.ctrlKey && e.shiftKey && e.keyCode == 73)
+        ) {
+          return false;
+        } else {
+          return true;
+        }
+      };
+    </script>
 
 
 
